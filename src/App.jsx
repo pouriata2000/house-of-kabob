@@ -14,6 +14,7 @@ function App() {
       <Navbar /> {/* This Navbar will appear on every page */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/contact" element={<Contact />} />
