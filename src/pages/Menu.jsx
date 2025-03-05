@@ -23,7 +23,7 @@ const CategoryButtons = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 2rem;
-  margin-top: 2.5rem;
+  margin-top: 3.5rem;
 
   button {
     background-color: #d6cfbd;
