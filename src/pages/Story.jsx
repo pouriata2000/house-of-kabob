@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
 const StoryContainer = styled.div`
-  display: flex;
+  position: absolute;  /* Ensures full-screen coverage */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3.5rem;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -10,6 +15,7 @@ const StoryContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   padding: 2rem;
+  overflow-y: auto;
 `;
 
 const StoryBox = styled.div`

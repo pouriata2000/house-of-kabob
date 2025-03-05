@@ -2,20 +2,31 @@ import styled from "styled-components";
 
 // Styled Components
 const HeroContainer = styled.div`
+  position: absolute;  /* Ensures full-screen coverage */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  
   color: white;
-  padding: 5rem 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
   background-image: url("/images/kabob-background.jpg");
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
 `;
+
 
 const OrderButton = styled.button`
   background-color: red;
@@ -55,6 +66,7 @@ const SocialWrapper = styled.div`
   align-items: center;
   gap: 1rem;
   margin-top: 20px;
+  margin-bottom: 150px;
 `;
 
 // Social Icons
@@ -79,11 +91,11 @@ const Home = () => {
   return (
     <HeroContainer>
       {/* Hero Section */}
-      <h1 style={{ fontSize: "4rem", fontWeight: "bold", textShadow: "2px 2px 8px rgba(0,0,0,0.6)" }}>
+      <h1 style={{ fontSize: "3rem", fontWeight: "bold", textShadow: "2px 2px 8px rgba(0,0,0,0.6)", marginTop:"300px"}}>
         House of Kabob
       </h1>
       <p style={{ fontSize: "1.5rem", textShadow: "2px 2px 4px rgba(0,0,0,0.4)" }}>Since 1987</p>
-      <h2 style={{ fontSize: "2.5rem", fontWeight: "600", letterSpacing: "3px", textShadow: "2px 2px 8px rgba(0,0,0,0.6)" }}>
+      <h2 style={{ fontSize: "1.5rem", fontWeight: "600", letterSpacing: "3px", textShadow: "2px 2px 8px rgba(0,0,0,0.6)" }}>
         PERSIAN CUISINE
       </h2>
 

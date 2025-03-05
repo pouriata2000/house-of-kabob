@@ -3,20 +3,28 @@ import emailjs from "emailjs-com";
 import styled from 'styled-components';
 
 const HeroContainer = styled.div`
+  position: absolute;  /* Ensures full-screen coverage */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  
   color: white;
-  padding: 1rem 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  min-height: 500px;
-  width: 100%;
   background-image: url("/images/reservation.png");
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 `;
 
 const Heading = styled.h2`
@@ -68,7 +76,7 @@ const SubmitButton = styled.button`
 const Reservations = () => {
   const [form, setForm] = useState({
     name: "",
-    email: "",
+    number:"",
     date: "",
     time: "",
     guests: ""
@@ -115,7 +123,7 @@ const Reservations = () => {
   const isFormValid = () => {
     return (
       form.name &&
-      form.email &&
+      form.number &&
       form.date &&
       form.time &&
       form.guests &&
@@ -145,7 +153,7 @@ const Reservations = () => {
 
       setForm({
         name: "",
-        email: "",
+        number: "",
         date: "",
         time: "",
         guests: ""
@@ -170,12 +178,12 @@ const Reservations = () => {
             required 
           />
           <InputField 
-            type="email" 
-            name="email" 
-            placeholder="Your Email" 
-            value={form.email} 
+            type="tel" 
+            name="number" 
+            placeholder="Your Phone Number" 
+            value={form.number} 
             onChange={handleChange} 
-            required 
+            required
           />
           <InputField 
             type="date" 
@@ -195,7 +203,7 @@ const Reservations = () => {
             required 
           />
           {!isTimeValid(form.time) && form.time && (
-            <p style={{ color: "red", fontSize: "0.875rem", marginTop: "0.5rem" }}>
+            <p style={{ color: "black", fontSize: "0.875rem", marginTop: "0.5rem" }}>
               Please select a time between 12:00 PM - 7:45 PM.
             </p>
           )}

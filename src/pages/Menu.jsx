@@ -4,11 +4,17 @@ import menuData from "../data/menuData";  // Import menu data
 
 // Styled Components
 const MenuContainer = styled.div`
+  position: absolute;  /* Ensures full-screen coverage */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 3.5rem;
   background-color: #4b4b4b;
   color: white;
   text-align: center;
   min-height: 100vh;
+  overflow-y: auto;
 `;
 
 const CategoryButtons = styled.div`
@@ -17,7 +23,7 @@ const CategoryButtons = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 2rem;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
 
   button {
     background-color: #d6cfbd;
@@ -99,3 +105,6 @@ const Menu = () => {
 };
 
 export default Menu;
+
+
+
