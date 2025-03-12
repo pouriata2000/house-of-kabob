@@ -6,6 +6,7 @@ const StoryContainer = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
+  display: flex;
   padding: 3.5rem;
   justify-content: center;
   align-items: center;
@@ -14,7 +15,7 @@ const StoryContainer = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 2rem;
+  padding: 2.5rem;
   overflow-y: auto;
 `;
 
@@ -25,6 +26,10 @@ const StoryBox = styled.div`
   border-radius: 20px;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
 `;
 
 const Title = styled.h2`

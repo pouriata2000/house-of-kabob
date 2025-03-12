@@ -73,13 +73,27 @@ const SubmitButton = styled.button`
   }
 `;
 
+const TextAreaField = styled.textarea`
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  min-height: 100px; /* Increase the height */
+  resize: vertical; /* Allows the user to resize vertically */
+`;
+
+
 const Reservations = () => {
   const [form, setForm] = useState({
     name: "",
     number:"",
     date: "",
     time: "",
-    guests: ""
+    guests: "",
+    instructions:""
   });
 
   // Get today's date in YYYY-MM-DD format
@@ -148,7 +162,12 @@ const Reservations = () => {
       const templateID = "template_exhy6at";
       const userID = "ajr7Dmv_PJoqxu8CG";
 
-      await emailjs.send(serviceID, templateID, form, userID);
+      const formData = {
+        ...form,
+        instructions: form.instructions.trim() || "No special instructions" // Default if empty
+      };
+
+      await emailjs.send(serviceID, templateID, formData, userID);
       alert("Reservation was made successfully!");
 
       setForm({
@@ -156,7 +175,8 @@ const Reservations = () => {
         number: "",
         date: "",
         time: "",
-        guests: ""
+        guests: "",
+        instructions: ""
       });
     } catch (error) {
       console.error("Failed to send reservation email", error);
@@ -188,6 +208,7 @@ const Reservations = () => {
           <InputField 
             type="date" 
             name="date" 
+            placeholder="YYYY-MM-DD"
             min={getTodayDate()} // Restrict past dates
             value={form.date} 
             onChange={handleChange} 
@@ -196,6 +217,7 @@ const Reservations = () => {
           <InputField 
             type="time" 
             name="time" 
+            placeholder="HH:MM"
             min={getMinTime()} // Restrict based on today's date
             max="19:45" // 7:45 PM
             value={form.time} 
@@ -213,9 +235,16 @@ const Reservations = () => {
             placeholder="Number of Guests"
             value={form.guests} 
             min="1" 
-            max="10" 
+            max="30" 
             onChange={handleChange} 
             required 
+          />
+          <TextAreaField 
+            type="text" 
+            name="instructions" 
+            placeholder="Any Reservation Instruction"
+            value={form.instructions} 
+            onChange={handleChange}  
           />
           <SubmitButton type="submit" disabled={!isFormValid()}>
             Reserve
