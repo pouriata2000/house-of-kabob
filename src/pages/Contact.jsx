@@ -73,7 +73,7 @@ const Contact = () => {
           <Text><strong>8025 Harford Rd., Parkville, Maryland, 21234</strong></Text>
           <Text>Tuesday - Sunday: 12:00pm - 8:30pm</Text>
           <Text><strong>Tel:</strong> (410) 663-0211</Text>
-          <Text><strong>Email:</strong> houseofkabob.parkville21234@gmail.com</Text>
+          <Text><strong>Email:</strong> houseofkababmd@gmail.com</Text>
         </InfoBox>
 
         {/* Map Section */}
