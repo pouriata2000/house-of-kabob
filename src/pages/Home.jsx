@@ -101,7 +101,7 @@ const Home = () => {
 
       {/* Order To-Go Button */}
       <OrderButton>
-        <a href="https://www.clover.com/online-ordering/house-of-kabob-baltimore" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+        <a href="https://www.clover.com/online-ordering/house-of-kabob-parkville" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
           Order To-Go 🛍️
         </a>
       </OrderButton>
