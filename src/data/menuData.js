@@ -400,7 +400,7 @@ const menuData = {
         "name": "Homemade Dough", 
         "image": "/images/dough.jpg", 
         "description": "Persian yoghurt drink.",
-        "price":"Cup ...... $3.50 <br> Gallon ...... $9.00"
+        "price":"Cup ...... $3.50 <br> Pitcher ...... $9.00"
       },
       { 
         "name": "Juice", 
