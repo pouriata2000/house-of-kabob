@@ -245,6 +245,20 @@ const menuData = {
       },
     ],
 
+    "Vegetarian Foods":[
+      { 
+        "name": "Bademjan Stew", 
+        "image": "/images/bademjan.jpg", 
+        "description": "",
+        "price":"$14.50"
+      },
+      { 
+        "name": "Fesenjan Stew", 
+        "image": "/images/fesenjan.jpg", 
+        "description": "",
+        "price":"$17.99"
+      },
+    ],
     //specialty rice
     "Specialty Rice":[
       { 
