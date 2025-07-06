@@ -53,7 +53,7 @@ const menuData = {
         "name": "Naan Panir Sabzi", 
         "image": "/images/sabzi.jpg", 
         "description": "A delightful mix of top-grade Bulgarian feta cheese, walnuts, parsley, radishes, and scallions served with pita bread.", 
-        "price": "Small ...... $5.50 <br> Large ...... $8.00"
+        "price": "Small ...... $7.00 <br> Large ...... $10.00"
       }
     ],
 
